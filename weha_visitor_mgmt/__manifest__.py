@@ -22,14 +22,14 @@
 
 {
     'name': "Front Office Management",
-    'version': '13.0.1.0.0',
-    'summary': """Manage Front Office Operations:Visitors, Devices Carrying Register, Actions""",
-    'description': """Helps You To Manage Front Office Operations, Odoo13, Odoo 13""",
-    'author': "Cybrosys Techno Solutions",
-    'maintainer': 'Cybrosys Techno Solutions',
-    'company': "Cybrosys Techno Solutions",
-    'website': "https://www.cybrosys.com",
-    'category': 'Industries',
+    'version': '13.0.1.0.1',
+    'summary': """Manage Building Visitor""",
+    'description': """Helps You To Manage Front Office Operations , Odoo 13""",
+    'author': "WEHA Consulting",
+    'maintainer': 'WEHA Consulting',
+    'company': "WEHA Consulting",
+    'website': "http://www.weha-id.com",
+    'category': 'Building',
     'depends': ['base'],
     'data': [
         'views/fo_visit.xml',

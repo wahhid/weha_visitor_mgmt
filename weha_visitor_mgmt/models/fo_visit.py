@@ -68,34 +68,6 @@ class VisitDetails(models.Model):
             self.department = self.visiting_person.department_id
 
 
-class PersonalBelongings(models.Model):
-    _name = 'fo.belongings'
-
-    property_name = fields.Char(string="Property", help='Employee belongings name')
-    property_count = fields.Char(string="Count", help='Count of property')
-    number = fields.Integer(compute='get_number', store=True, string="Sl")
-    belongings_id_fov_visitor = fields.Many2one('fo.visit', string="Belongings")
-    belongings_id_fov_employee = fields.Many2one('fo.property.counter', string="Belongings")
-    permission = fields.Selection([
-        ('0', 'Allowed'),
-        ('1', 'Not Allowed'),
-        ('2', 'Allowed With Permission'),
-        ], 'Permission', required=True, index=True, default='0', track_visibility='onchange')
-
-    @api.depends('belongings_id_fov_visitor', 'belongings_id_fov_employee')
-    def get_number(self):
-        for visit in self.mapped('belongings_id_fov_visitor'):
-            number = 1
-            for line in visit.visitor_belongings:
-                line.number = number
-                number += 1
-        for visit in self.mapped('belongings_id_fov_employee'):
-            number = 1
-            for line in visit.visitor_belongings:
-                line.number = number
-                number += 1
-
-
 class VisitPurpose(models.Model):
     _name = 'fo.purpose'
 
