@@ -30,7 +30,7 @@
     'company': "Cybrosys Techno Solutions",
     'website': "https://www.cybrosys.com",
     'category': 'Industries',
-    'depends': ['base', 'hr'],
+    'depends': ['base'],
     'data': [
         'views/fo_visit.xml',
         'views/fo_visitor.xml',
