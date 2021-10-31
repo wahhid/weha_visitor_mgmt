@@ -21,8 +21,8 @@ class VisitDetails(models.Model):
     email = fields.Char(string="Email", required=True)
     reason = fields.Many2many('fo.purpose', string='Purpose Of Visit', required=True,
                               help='Enter the reason for visit')
-    visitor_belongings = fields.One2many('fo.belongings', 'belongings_id_fov_visitor', string="Personal Belongings",
-                                         help='Add the belongings details here.')
+    # visitor_belongings = fields.One2many('fo.belongings', 'belongings_id_fov_visitor', string="Personal Belongings",
+    #                                      help='Add the belongings details here.')
     check_in_date = fields.Datetime(string="Check In Time", help='Visitor check in time automatically'
                                                                  ' fills when he checked in to the office.')
     check_out_date = fields.Datetime(string="Check Out Time", help='Visitor check out time automatically '
