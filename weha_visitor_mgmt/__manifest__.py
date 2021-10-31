@@ -22,9 +22,9 @@
 
 {
     'name': "Front Office Management",
-    'version': '13.0.1.0.1',
+    'version': '14.0.1.0',
     'summary': """Manage Building Visitor""",
-    'description': """Helps You To Manage Front Office Operations , Odoo 13""",
+    'description': """Helps You To Manage Front Office Operations""",
     'author': "WEHA Consulting",
     'maintainer': 'WEHA Consulting',
     'company': "WEHA Consulting",
